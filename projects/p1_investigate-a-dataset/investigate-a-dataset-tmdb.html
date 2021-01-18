@@ -13129,6 +13129,9 @@ div#notebook {
     <li><a href="#q3">Research Question 3 : Is there a correlation between movie vote average and revenue?</a></li>
     </ul>
 <li><a href="#conclusions">Conclusions</a></li>
+    <ul>
+        <li><a href="#conclusions-1">Limitations</a></li>
+    </ul>
 </ul>
 </div>
 </div>
@@ -38723,14 +38726,33 @@ z
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The dataset contains the data of 10866 movies. Altough this number is good for a movie database and can represent the whole population, the dataset has some limitations:</p>
-<ul>
-<li>It has some movies that have missing genres (23 rows of 10866) but it was easily neglecgted and such a small number didn't affect our analysis of popularity of genres much.</li>
-<li>It has large count of rows with missing (zero) revenue values (6016 of 10866), which is a large percentage for such a dataset (55%). Such large percentage of missing values affects the analysis of the relationship between popularity and revenue, and voting average and revenue.</li>
-</ul>
+<p>The dataset contains the data of 10866 movies. This number is good for a movie database and can represent the whole population.</p>
 <p>The popularity of gernes from year to year was analyzied by calculating the mean of popularity for each genre for years from 1960 to 2010. It was found that the three genres <code>Adventure</code>, <code>Animation</code> and <code>Fantasy</code> were the most popular three genres for all the years.</p>
 <p>To measure the relationship between revenue and both popularity and voting average the pearson correlation test was used.
 The correlation test was made betwen popularity and revenue and was found to be 0.60 indicating a moderate correlation. It was also tested for the relationship between voting average and revenue and was measured 0.19 indicating weak or non-existent correlation.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id='conclusions-1'></a></p>
+<h3 id="Limitations">Limitations<a class="anchor-link" href="#Limitations">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The dataset has some limitations:</p>
+<ul>
+<li><em>Missing genres</em> : Some movies that have missing genres (23 rows of 10866) but it was easily neglecgted and such a small number didn't affect our analysis of popularity of genres much.</li>
+<li><em>Zero revenue</em> It has large count of rows with missing (zero) revenue values (6016 of 10866), which is a large percentage for such a dataset (55%). Such large percentage of missing values affects the analysis of the relationship between popularity and revenue, and voting average and revenue. Those data points were removed as they could not be completed.</li>
+<li><em>Zero budget</em> values. removing such values in addtion to zero revenue values would make analysis of the relationship between budget and revenue not very accurate.</li>
+<li>Certain columns, like <code>cast</code> and <code>genres</code>, contain multiple values separated by pipe (|) characters. The <code>genres</code> required significant work to prepare them for a analysis.</li>
+<li>Ambiguous <code>popularity</code> metric. Not enough details about how it was calculated.</li>
+</ul>
 
 </div>
 </div>
