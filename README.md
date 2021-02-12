@@ -17,3 +17,4 @@ This repository contains solutions to projects submitted in fulfillment of the r
 # List of Projects
 
 1. [Investigate a Dataset](projects/p1_investigate-a-dataset)
+2. [Analyze A/B Test Results](projects/p2_analyze-ab-test-results)
